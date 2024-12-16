@@ -1,6 +1,7 @@
 # Stepper Motor Experiment Repository ⚙️
 
 This open-source contribution project aims to develop a structured experiment setup for understanding stepper motors. Future students can use this repository to explore the behavior, limitations, and complexities of stepper motors through practical demonstrations.
+
 ---
 
 ## 🚀 Purpose of the Project
