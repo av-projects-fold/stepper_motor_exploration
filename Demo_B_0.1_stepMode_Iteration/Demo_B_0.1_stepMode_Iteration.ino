@@ -37,8 +37,8 @@ Microstepping Mode Configuration (MS1, MS2, MS3 pins):
 #define EIGHTH_STEP 3
 #define SIXTEENTH_STEP 4
 
-// define the stepPerRevolution variable with a current default value of 200
-int stepsPerRevolution = 200;
+// define the stepPerRevolution variable
+int stepsPerRevolution;
 
 // Array to store MS1, MS2, MS3 values for each step mode
 int stepModes[5][3] = {
@@ -52,7 +52,7 @@ int stepModes[5][3] = {
 // Select Starting Parameters
 int stepMode = SIXTEENTH_STEP;
 float RPM = 60;
-bool constant_stepDelay = false;
+bool constant_stepDelay_n_steps = false; //sets the stepDelay and number of steps to do, constant
 
 
 void setup() {
@@ -74,15 +74,16 @@ void loop() {
   // Set the spinning direction clockwise:
   digitalWrite(dirPin, HIGH);
 
-  float secPerStep = 60000000 / (RPM * stepsPerRevolution);  //step delay in millisecond for micro go 6000000 // ...
-  float stepDelay = secPerStep / 2.0;
+  float stepDelay = 60000000 / (RPM * stepsPerRevolution);  //step delay in millisecond for micro go 6000000 // ...
+  float stepDelay = stepDelay / 2.0;
 
   Serial.println("Step Mode: " + String(stepMode) + " | RPM: " + String(RPM) + " | Steps per Revolution: " + String(stepsPerRevolution) + " | stepDelay: " + String(stepDelay));
 
   // sets the number of pulses per second constant as Step mode changes.
-  // additionaly caps the "steps per revolution" at 400 steps
-  if (constant_stepDelay == true) {
+  // additionally caps the "steps per revolution" at 400 steps
+  if (constant_stepDelay_n_steps == true) {
     stepDelay = 5000;          //stepDelay in millisecond for FULL_STEP, 200 stepsPerRevolution at 60 rpm
+    pulseDelay = stepDelay/2;
     stepsPerRevolution = 400;  //2x default FULL_STEP rotations (2 rotations)
   }
 
@@ -90,9 +91,9 @@ void loop() {
   for (int i = 0; i < stepsPerRevolution; i++) {
     // These four lines result in 1 step:
     digitalWrite(stepPin, HIGH);
-    delayMicroseconds(stepDelay);
+    delayMicroseconds(pulseDelay);
     digitalWrite(stepPin, LOW);
-    delayMicroseconds(stepDelay);
+    delayMicroseconds(pulseDelay);
   }
 
 
