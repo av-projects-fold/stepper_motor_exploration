@@ -13,8 +13,6 @@ This repository contains multiple experiment demos, each showcasing different as
 | `Demo_A_0.1_manual_stepMode_&_RPM`    | Allows **manual control** of RPM and step modes to observe the motor’s behavior in real-time.   |
 | `Demo_B_0.1_stepMode_Iteration`       | Iterates through step modes automatically after completing a full revolution at a set RPM.      |
 | `Demo_C_0.1_incremental_RPM`          | Enables **manual step mode selection** while incrementally adjusting RPM after a user-defined cycle time. |
-| `Demo_D_Incremental_stepDelay`        | Allows fine control of motor speed by letting users set the **step delay** directly.            |
-| `Demo_E_smoothing_the_motor`          | Switches to different step modes at user-defined points as RPM changes, improving motor control. |
 
 ---
 
@@ -24,8 +22,8 @@ This repository contains multiple experiment demos, each showcasing different as
 - 🔍 **Experiment Goals**:
    1. Analyze stepper motor behaviors at different step modes (Full, Half, etc.).
    2. Explore the effect of RPM and step delay adjustments.
-   3. Measure and compare vibrations using piezo sensors and oscilloscopes.
-
+   3. Measure and compare vibrations using piezo sensors and oscilloscopes. for varying settings.
+   
 ---
 
 ## 🛠️ Hardware Setup & Requirements
@@ -52,14 +50,14 @@ This repository contains multiple experiment demos, each showcasing different as
 - Differences in motor sound and performance are noticeable at each step mode.
 
 ### **Demo C: Incremental RPM**
-- RPM increments by a user-defined value after a specified cycle time.
+- RPM increments by a user-defined value after a specified cycle time. Thus, accelerating or decelerating incrementally.
 - Step mode remains manually selectable.
 
 ### **Vibration Analysis (Future Addition)**:
 - Vibrations can be measured using piezo sensors and analyzed via:
   - Oscilloscope
   - Audio recording software
-  - Dedicated data-logging tools
+  - Or dedicated data-logging tools
 
 ---
 
@@ -70,19 +68,16 @@ This repository contains multiple experiment demos, each showcasing different as
 - [x] **Demo_C**: Incrementally adjusts RPM after a user-defined cycle time while maintaining manual step mode selection.
 - [ ] **Demo_D**: Adds incremental step delay functionality for finer control over motor speed.
 - [ ] **Demo_E**: Implements smoother motor transitions by switching step modes during RPM changes.
-- [ ] **Add vibration measurement setup instructions** (`hardware_setup.md`).
+- [ ] **Add hardware instructions** Arduino circuit board
+- [ ] **Add stepper motor theory sources and more** How a stepper motor works. Defining terminology.
+- [ ] **Add vibration measurement method** 
 - [ ] **Introduce stepper motor libraries for Arduino** for enhanced motor control functionality.
-- [ ] **Provide example data files** and visuals for results.
-- [ ] **Document piezo sensor integration** for vibration analysis (oscilloscope and audio recording setup).
-- [ ] **Add real-time motor control** via serial inputs.
-- [ ] **Test and validate all demos** with different hardware configurations.
 
----
-
-## 📌 Notes
-
-- Currently, no external libraries are required.  
-- Future files will introduce **dedicated stepper motor libraries** for improved functionality.  
+### Demo_D_Incremental_stepDelay ###      
+  - Allows fine control of motor speed changes by letting users set the **step delay** incrementally rather than the RPM.
+  - Step mode remains manually selectable.
+### Demo_E_smoothing_the_motor ###
+  - Switches to different step modes at user-defined points as RPM changes, improving motor control.
 
 ---
 
@@ -97,16 +92,11 @@ We welcome contributions from the community! To contribute:
 
 ## 🔗 Additional Resources
 
-- [Arduino Documentation](https://www.arduino.cc/)
-- [Stepper Motor Control Basics](https://example.com/stepper-motor-basics)
-- [How to Set Up a Piezo Sensor with Arduino](https://example.com/piezo-setup)
-
----
-
-## 👥 Contributors
-
-- **Your Name** – Lead Developer  
-- Open-source community contributions are welcome!  
+- [Stepper Motor Datasheet (best one found) SY42STH38-1684A ](https://www.pololu.com/file/0J714/SY42STH38-1684A.pdf)
+- [Arduino Pro Micro 16MHz Datasheet](https://cdn.sparkfun.com/assets/f/d/8/0/d/ProMicro16MHzv2.pdf)
+- [A4988 Stepper Motor Driver Tutorial](https://www.makerguides.com/a4988-stepper-motor-driver-arduino-tutorial/)
+- [A4988 Stepper Motor Driver Datasheet](https://www.allegromicro.com/~/media/Files/Datasheets/A4988-Datasheet.ashx)
+- [Stepper Motor A4988 Tutorial](https://3dpellet.com/tutorials/arduino/actuators/stepper-motor-a4988/)
 
 ---
 
