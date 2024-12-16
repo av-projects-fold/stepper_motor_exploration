@@ -74,8 +74,8 @@ void loop() {
   // Set the spinning direction clockwise:
   digitalWrite(dirPin, HIGH);
 
-  float stepDelay = 60000000 / (RPM * stepsPerRevolution);  //step delay in millisecond for micro go 6000000 // ...
-  float stepDelay = stepDelay / 2.0;
+  float stepDelay = 60.0 / (RPM * stepsPerRevolution);  // in seconds
+  float pulseDelay = (stepDelay / 2) * 1000 * 1000;    //step delay in microseconds.
 
   Serial.println("Step Mode: " + String(stepMode) + " | RPM: " + String(RPM) + " | Steps per Revolution: " + String(stepsPerRevolution) + " | stepDelay: " + String(stepDelay));
 

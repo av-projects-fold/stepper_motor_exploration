@@ -29,7 +29,7 @@ Microstepping Mode Configuration (MS1, MS2, MS3 pins):
 #define MS3 7
 
 // Settings
-#define stepsPerRevolution 1600 //How many steps in a revolution. Specificed by the stepMode and Stepper Motor resolution.
+#define stepsPerRevolution 1600 //How many steps in a revolution. Specified by the stepMode and Stepper Motor resolution.
 float RPM = 60; //rotations per minute
 
 void setup() {
@@ -53,18 +53,18 @@ void setup() {
 void loop() {
   // The stepper motor moves by having signals sent at specified intervals. 
   // The interval (stepDelay) between each signal determined the stepper motors speed
-  float stepDelay = 60000000 / (RPM * stepsPerRevolution); //step delay in millisecond for micro go 6000000 // ...
-  float signalDelay = stepDelay/2; // time for a high or low signal step 
-  Serial.println("RPM: " + String(RPM) + "  signalDelay us: " + String(signalDelay));
+  float stepDelay = 60.0 / (RPM * stepsPerRevolution);  // in seconds
+  float pulseDelay = (stepDelay / 2) * 1000 * 1000;    //step delay in microseconds.
+  Serial.println("RPM: " + String(RPM) + "  pulseDelay us: " + String pulseDelay));
 
   
   // Spin the stepper motor 1 revolution
   for (int i = 0; i < stepsPerRevolution; i++) {
     // These four lines result in 1 step:
     digitalWrite(stepPin, HIGH);
-    delayMicroseconds(signalDelay);
+    delayMicroseconds(pulseDelay);
     digitalWrite(stepPin, LOW);
-    delayMicroseconds(signalDelay);
+    delayMicroseconds(pulseDelay);
   }
 
 }
