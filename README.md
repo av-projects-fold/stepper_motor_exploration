@@ -1,19 +1,6 @@
 # Stepper Motor Experiment Repository ⚙️
 
 This open-source contribution project aims to develop a structured experiment setup for understanding stepper motors. Future students can use this repository to explore the behavior, limitations, and complexities of stepper motors through practical demonstrations.
-
----
-
-## 📁 Project Structure
-
-This repository contains multiple experiment demos, each showcasing different aspects of stepper motor control:
-
-| Folder Name                           | Description                                                                                     |
-|---------------------------------------|-------------------------------------------------------------------------------------------------|
-| `Demo_A_0.1_manual_stepMode_&_RPM`    | Allows **manual control** of RPM and step modes to observe the motor’s behavior in real-time.   |
-| `Demo_B_0.1_stepMode_Iteration`       | Iterates through step modes automatically after completing a full revolution at a set RPM.      |
-| `Demo_C_0.1_incremental_RPM`          | Enables **manual step mode selection** while incrementally adjusting RPM after a user-defined cycle time. |
-
 ---
 
 ## 🚀 Purpose of the Project
@@ -26,20 +13,15 @@ This repository contains multiple experiment demos, each showcasing different as
    
 ---
 
-## 🛠️ Hardware Setup & Requirements
+## 📁 Project Structure
 
-1. **Hardware**:
-   - Stepper motor (compatible with Arduino Micro).
-   - Arduino Micro board.
-   - Power supply and jumper wires.
-   - Optional: Piezo sensors, oscilloscope, or audio logging tools for vibration analysis.
+This repository contains multiple experiment demos, each showcasing different aspects of stepper motor control:
 
-2. **Software**:
-   - Arduino IDE (or any other compatible IDE).
-
----
-
-## 📊 Expected Outputs
+| Folder Name                           | Description                                                                                     |
+|---------------------------------------|-------------------------------------------------------------------------------------------------|
+| `Demo_A_0.1_manual_stepMode_&_RPM`    | Allows **manual control** of RPM and step modes to observe the motor’s behavior in real-time.   |
+| `Demo_B_0.1_stepMode_Iteration`       | Iterates through step modes automatically after completing a full revolution at a set RPM.      |
+| `Demo_C_0.1_incremental_RPM`          | Enables **manual step mode selection** while incrementally adjusting RPM after a user-defined cycle time. |
 
 ### **Demo A: Manual Step Mode and RPM**
 - User sets the RPM and step mode manually.
@@ -58,6 +40,19 @@ This repository contains multiple experiment demos, each showcasing different as
   - Oscilloscope
   - Audio recording software
   - Or dedicated data-logging tools
+
+---
+
+## 🛠️ Hardware Setup & Requirements
+
+1. **Hardware**:
+   - Stepper motor (compatible with Arduino Micro).
+   - Arduino Micro board.
+   - Power supply and jumper wires.
+   - Optional: Piezo sensors, oscilloscope, or audio logging tools for vibration analysis.
+
+2. **Software**:
+   - Arduino IDE (or any other compatible IDE).
 
 ---
 
