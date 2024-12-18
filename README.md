@@ -47,6 +47,9 @@ This repository contains multiple experiment demos, each showcasing different as
 ## 🛠️ Hardware Setup & Requirements
 
 1. **Hardware**:
+
+More [hardware description](/Hardware_Setup/Hardware_description.md)  
+
    - Stepper motor (compatible with Arduino Micro).
    - Arduino Micro board.
    - Power supply and jumper wires.
