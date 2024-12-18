@@ -96,10 +96,14 @@ To set the current limit on A4988:
 1. Power the A4988 via VDD (5V).  
 2. Measure **Vref** at the current limit potentiometer.  
 3. Use the formula:  
-   $ V_{\text{ref}} = \frac{\text{Current Limit}}{8 \times R_{\text{sc}}} $
+ ```math
+   V_{\text{ref}} = \frac{\text{Current Limit}}{8 \times R_{\text{sc}}}
+ ```
+    Example: For 1A limit with Rsc = 0.068 Ω,
 
-    Example: For 1A limit with $R_{\text{sc}} = 0.068 \, \Omega$,  
-    $ V_{\text{ref}} = 1 \times (8 \times 0.068) = 0.544 \, \text{V} $
+ ```math
+    V_{\text{ref}} = 1 \times (8 \times 0.068) = 0.544 \, \text{V}
+ ```
 
 Reference table:
 
@@ -144,9 +148,12 @@ void loop() {
 
 ### Step 4: Adjust Step Delay for Desired RPM
 To achieve a specific RPM, adjust `delayMicroseconds()` using the formula:  
-\[
-\text{Step Delay (µs)} = \frac{6,000,000}{\text{RPM} \times \text{StepsPerRev}}
-\]
+```math
+\text{stepDelay (µs)} = \frac{6,000,000}{\text{RPM} \times \text{StepsPerRev}} 
+```
+```math
+\text{pulseDelay (µs)} = \frac{stepDelay}{2}
+```
 
 ---
 

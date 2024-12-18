@@ -48,12 +48,12 @@ This repository contains multiple experiment demos, each showcasing different as
 
 1. **Hardware**:
 
-More [hardware description](/Hardware_Setup/Hardware_description.md)  
-
    - Stepper motor (compatible with Arduino Micro).
    - Arduino Micro board.
    - Power supply and jumper wires.
    - Optional: Piezo sensors, oscilloscope, or audio logging tools for vibration analysis.
+  
+      More [hardware description](/Hardware_Setup/Hardware_description.md
 
 2. **Software**:
    - Arduino IDE (or any other compatible IDE).
