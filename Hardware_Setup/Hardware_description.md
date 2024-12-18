@@ -88,7 +88,7 @@ Where:
 Follow the wiring setup below:
 ![Basic Hardware Circuit](img/Basic%20Hardware%20Circuit.png)
 
-One may come across some confusion with ensuring the right stepper motor coil pairs are connected to the driver. Follow this tutorial to ensure the correct configuration [Link](https://youtu.be/Bm9b0XT5-rw)
+One may come across some confusion with ensuring the right stepper motor coil pairs are connected to the driver. Follow this tutorial to ensure the correct configuration. [Link](https://youtu.be/Bm9b0XT5-rw)
 
 
 ### Step 2: Setting the Current Limit
@@ -96,13 +96,10 @@ To set the current limit on A4988:
 1. Power the A4988 via VDD (5V).  
 2. Measure **Vref** at the current limit potentiometer.  
 3. Use the formula:  
-   \[
-   Vref = \text{Current Limit} / (8 \times R_{sc})
-   \]  
-   Example: For **1A limit** with **Rsc = 0.068 Ω**,  
-   \[
-   Vref = 1 \times (8 \times 0.068) = 0.544 \text{ V}
-   \]
+   $ V_{\text{ref}} = \frac{\text{Current Limit}}{8 \times R_{\text{sc}}} $
+
+    Example: For 1A limit with $R_{\text{sc}} = 0.068 \, \Omega$,  
+    $ V_{\text{ref}} = 1 \times (8 \times 0.068) = 0.544 \, \text{V} $
 
 Reference table:
 
