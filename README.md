@@ -67,7 +67,7 @@ This repository contains multiple experiment demos, each showcasing different as
 - [x] **Demo_C**: Incrementally adjusts RPM after a user-defined cycle time while maintaining manual step mode selection.
 - [ ] **Demo_D**: Adds incremental step delay functionality for finer control over motor speed.
 - [ ] **Demo_E**: Implements smoother motor transitions by switching step modes during RPM changes.
-- [ ] **Add hardware instructions** Arduino circuit board
+- [x] **Add hardware instructions** Arduino circuit board
 - [ ] **Add stepper motor theory sources and more** How a stepper motor works. Defining terminology.
 - [ ] **Add vibration measurement method** 
 - [ ] **Introduce stepper motor libraries for Arduino** for enhanced motor control functionality.
