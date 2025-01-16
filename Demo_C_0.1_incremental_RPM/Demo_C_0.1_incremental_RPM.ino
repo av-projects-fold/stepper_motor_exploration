@@ -51,9 +51,9 @@ int stepsPerRevolution;
 
 
 // Select Starting Parameters
-int stepMode = 4;
+int stepMode = HALF_STEP;
 float RPM = 10;         //starting RPM
-float RPMstep = 1;      //RPM incremental step (+/-)
+float RPMstep = 5;      //RPM incremental step (+/-)
 float cycletime = 1;  //time in secoonds for each incremental step
 // ============================================================================================
 

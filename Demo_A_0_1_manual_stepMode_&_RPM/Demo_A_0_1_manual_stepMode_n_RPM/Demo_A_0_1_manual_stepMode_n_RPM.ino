@@ -30,7 +30,7 @@ Microstepping Mode Configuration (MS1, MS2, MS3 pins):
 
 // Settings
 #define stepsPerRevolution 1600 //How many steps in a revolution. Specified by the stepMode and Stepper Motor resolution.
-float RPM = 60; //rotations per minute
+float RPM = 120; //rotations per minute
 
 void setup() {
   Serial.begin(9600);
@@ -55,7 +55,7 @@ void loop() {
   // The interval (stepDelay) between each signal determined the stepper motors speed
   float stepDelay = 60.0 / (RPM * stepsPerRevolution);  // in seconds
   float pulseDelay = (stepDelay / 2) * 1000 * 1000;    //step delay in microseconds.
-  Serial.println("RPM: " + String(RPM) + "  pulseDelay us: " + String pulseDelay));
+  Serial.println("RPM: " + String(RPM) + "  pulseDelay us: " + String(pulseDelay));
 
   
   // Spin the stepper motor 1 revolution

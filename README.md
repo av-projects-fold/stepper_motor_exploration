@@ -20,7 +20,7 @@ This repository contains multiple experiment demos, each showcasing different as
 
 | Folder Name                           | Description                                                                                     |
 |---------------------------------------|-------------------------------------------------------------------------------------------------|
-| `Demo_A_0.1_manual_stepMode_&_RPM`    | Allows **manual control** of RPM and step modes to observe the motor’s behavior in real-time.   |
+| `Demo_A_0.1_manual_stepMode_n_RPM`    | Allows **manual control** of RPM and step modes to observe the motor’s behavior in real-time.   |
 | `Demo_B_0.1_stepMode_Iteration`       | Iterates through step modes automatically after completing a full revolution at a set RPM.      |
 | `Demo_C_0.1_incremental_RPM`          | Enables **manual step mode selection** while incrementally adjusting RPM after a user-defined cycle time. |
 

@@ -52,7 +52,7 @@ int stepModes[5][3] = {
 // Select Starting Parameters
 int stepMode = SIXTEENTH_STEP;
 float RPM = 60;
-bool constant_stepDelay_n_steps = false; //sets the stepDelay and number of steps to do, constant
+bool constant_stepDelay_n_steps = false; //sets the stepDelay and number of steps to do constant
 
 
 void setup() {
@@ -77,7 +77,7 @@ void loop() {
   float stepDelay = 60.0 / (RPM * stepsPerRevolution);  // in seconds
   float pulseDelay = (stepDelay / 2) * 1000 * 1000;    //step delay in microseconds.
 
-  Serial.println("Step Mode: " + String(stepMode) + " | RPM: " + String(RPM) + " | Steps per Revolution: " + String(stepsPerRevolution) + " | stepDelay: " + String(stepDelay));
+  Serial.println("Step Mode: " + String(stepMode) + " | RPM: " + String(RPM) + " | Steps per Revolution: " + String(stepsPerRevolution) + " | stepDelay: " + String(stepDelay*1000) +"ms");
 
   // sets the number of pulses per second constant as Step mode changes.
   // additionally caps the "steps per revolution" at 400 steps
